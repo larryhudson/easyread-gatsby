@@ -6,12 +6,16 @@ import { graphql, Link } from 'gatsby'
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
+    const { edges: pages } = data;
 
     return (
       <Layout>
         <div>
           <h1>Home page!</h1>
           <p><Link to="/title-of-the-first-page">First page</Link></p>
+          {pages.map(page => (
+            <p><Link to={page.fields.slug}>{page.title}</Link></p>
+            ))}
         </div>
       </Layout>
     )
