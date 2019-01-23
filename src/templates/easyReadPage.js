@@ -14,7 +14,6 @@ export const AlbumTemplate = ({
   image,
   blurb,
   helmet,
-  sections
 }) => {
   const EasyRead = contentComponent || Content
   return (
@@ -32,7 +31,7 @@ export const AlbumTemplate = ({
 
           </Header>
 
-          {sections.map(section => (
+          {/* sections.map(section => (
             <Section>
             <Heading>{section.heading}</Heading>
 
@@ -49,7 +48,7 @@ export const AlbumTemplate = ({
               ))}
 
             </Section>  
-          ))}
+          )) */}
 
       </section>
   )
@@ -88,7 +87,6 @@ const Paragraph = styled.p.attrs({
 })``
 
 AlbumTemplate.propTypes = {
-  sections: PropTypes.array.isRequired,
   blurb: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
@@ -103,7 +101,6 @@ const EasyReadPage = ({ data }) => {
       <AlbumTemplate
         blurb={page.frontmatter.blurb}
         contentComponent={HTMLContent}
-        sections={page.frontmatter.sections}
         image={page.frontmatter.image}
         helmet={
           <Helmet
@@ -113,7 +110,6 @@ const EasyReadPage = ({ data }) => {
             <meta name="description" content={`${page.frontmatter.blurb}`} />
           </Helmet>
         }
-        tags={page.frontmatter.tags}
         title={page.frontmatter.title}
       />
     </Layout>
@@ -136,22 +132,7 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        sections {
-          heading
-          rows {
-            image {
-                id
-                childImageSharp {
-                  fluid(maxWidth: 500) {
-                    ...GatsbyImageSharpFluid
-                  }
-               }
-             }
-            body
-          }
-        }
         blurb
-        tags
         image {
   	      id
   	      childImageSharp {
