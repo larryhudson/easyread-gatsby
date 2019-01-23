@@ -23,6 +23,14 @@ sections:
           This is a row with a lot of text.  This is a row with a lot of text. 
           This is a row with a lot of text.
         image: /img/enjoy_the_great_outdoors.jpg
+      - body: You can drag these rows and sections around in the CMS.
+        image: /img/enjoy_the_great_outdoors.jpg
+  - heading: Another section
+    rows:
+      - body: Here's another row.
+        image: /img/enjoy_the_great_outdoors.jpg
+      - body: And yet another row! Wow!
+        image: /img/enjoy_the_great_outdoors.jpg
 date: 2019-01-23T09:17:51.838Z
 tags:
   - tag
