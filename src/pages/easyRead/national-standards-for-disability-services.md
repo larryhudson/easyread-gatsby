@@ -5,6 +5,7 @@ blurb: This is the Kurrajong National Standards for Disability Services.
 image: /img/standards-01.jpg
 sections:
   - heading: How to use this document
+    image: /img/abozer_fiona_sit_couch_read_document_support.jpg
     rows:
       - body: >-
           This information is written in an easy to read way. We use pictures to
@@ -22,6 +23,7 @@ sections:
           A friend, family member or support person may be able to help you.
         image: /img/abozer_fiona_sit_couch_read_document_support.jpg
   - heading: What this manual is about
+    image: /img/standards-01.jpg
     rows:
       - body: |-
           This manual will help you understand our services.
@@ -34,6 +36,7 @@ sections:
       - body: '* the type of service we need to provide you.'
         image: /img/Agnes_Brendan_carer_advocate_use_iPad_tablet.jpg
   - heading: What are the National Standards for Disability Services?
+    image: /img/National_Standards_for_Disability_Services-01.jpg
     rows:
       - body: >-
           The governments in Australia wanted to make sure that people with
