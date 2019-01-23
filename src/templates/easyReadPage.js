@@ -14,6 +14,7 @@ export const AlbumTemplate = ({
   image,
   blurb,
   helmet,
+  sections
 }) => {
   const EasyRead = contentComponent || Content
   return (
@@ -31,7 +32,7 @@ export const AlbumTemplate = ({
 
           </Header>
 
-          {/* sections.map(section => (
+          {sections.map(section => (
             <Section>
             <Heading>{section.heading}</Heading>
 
@@ -48,7 +49,7 @@ export const AlbumTemplate = ({
               ))}
 
             </Section>  
-          )) */}
+          ))}
 
       </section>
   )
@@ -67,19 +68,19 @@ const Section = styled.section.attrs({
 })``
 
 const Heading = styled.h3.attrs({
-  className: "f3 mb2"
+  className: "f3 mb3"
 })``
 
 const Row = styled.div.attrs({
-  className: "dt"
+  className: "dt w-100"
 })``
 
 const ImageWrapper = styled.div.attrs({
-  className: "dtc v-center w-100 w-20-ns"
+  className: "dtc pa1 mr3 v-mid w-100 w-25-ns"
 })``
 
 const Text = styled.div.attrs({
-  className: "dtc v-center w-100 w-80-ns"
+  className: "dtc f4 pa3 pl5 ml3 v-mid w-100 w-75-ns"
 })``
 
 const Paragraph = styled.p.attrs({
@@ -87,7 +88,7 @@ const Paragraph = styled.p.attrs({
 })``
 
 AlbumTemplate.propTypes = {
-  blurb: PropTypes.string,
+  sections: PropTypes.array.isRequired,
   title: PropTypes.string,
   helmet: PropTypes.object,
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -101,6 +102,7 @@ const EasyReadPage = ({ data }) => {
       <AlbumTemplate
         blurb={page.frontmatter.blurb}
         contentComponent={HTMLContent}
+        sections={page.frontmatter.sections}
         image={page.frontmatter.image}
         helmet={
           <Helmet
@@ -110,6 +112,7 @@ const EasyReadPage = ({ data }) => {
             <meta name="description" content={`${page.frontmatter.blurb}`} />
           </Helmet>
         }
+        tags={page.frontmatter.tags}
         title={page.frontmatter.title}
       />
     </Layout>
@@ -133,6 +136,19 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         blurb
+        sections {
+          heading
+          rows {
+            body
+            image {
+              childImageSharp {
+                fluid(maxWidth:500) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
         image {
   	      id
   	      childImageSharp {

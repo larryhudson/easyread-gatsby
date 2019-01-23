@@ -37,9 +37,9 @@ const TemplateWrapper = ({ children }) => (
         </Helmet>
         <header>
         <HeaderLink to="/">
-          <H1>Lazy music blog</H1>
+          <H1>Easy Read website</H1>
         </HeaderLink>
-        <p>Using this to write about music and learn web dev stuff.</p>
+        <p>A prototype to make Easy Read web pages.</p>
         </header>
         <div>{children}</div>
       </Container>
@@ -48,7 +48,7 @@ const TemplateWrapper = ({ children }) => (
 )
 
 const Container = styled.div.attrs({
-  className: "mw7-ns center bg-light-gray pa3 ph5-ns sans-serif",
+  className: "mw7-ns center bg-white pa3 ph5-ns sans-serif",
 })``
 
 const HeaderLink = styled(Link).attrs({
