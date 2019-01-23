@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Layout from '../components/Layout'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -11,6 +11,7 @@ export default class IndexPage extends React.Component {
       <Layout>
         <div>
           <h1>Home page!</h1>
+          <p><Link to="/title-of-the-first-page">First page</Link></p>
         </div>
       </Layout>
     )
