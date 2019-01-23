@@ -29,7 +29,7 @@ export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "album" } }}
+      filter: { frontmatter: { templateKey: { eq: "easyReadPage" } }}
     ) {
       edges {
         node {
@@ -39,7 +39,6 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            artist
             blurb
             image {
               id

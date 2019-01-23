@@ -13,6 +13,7 @@ export const AlbumTemplate = ({
   contentComponent,
   image,
   blurb,
+  helmet,
   sections
 }) => {
   const EasyRead = contentComponent || Content
@@ -54,25 +55,34 @@ export const AlbumTemplate = ({
   )
 }
 
+const Header = styled.div.attrs({
+  className: "pa3"
+})``
+
 const PageTitle = styled.h2.attrs({
   className: "f2 mb2"
-})
+})``
 
 const Section = styled.section.attrs({
   className: "pv2",
 })``
 
+const Heading = styled.h3.attrs({
+  className: "f3 mb2"
+})``
+
 const Row = styled.div.attrs({
   className: "dt"
-})
+})``
 
 const ImageWrapper = styled.div.attrs({
   className: "dtc v-center w-100 w-20-ns"
-})
+})``
 
 const Text = styled.div.attrs({
   className: "dtc v-center w-100 w-80-ns"
-})
+})``
+
 const Paragraph = styled.p.attrs({
   className: "lh-copy measure",
 })``
@@ -91,7 +101,7 @@ const EasyReadPage = ({ data }) => {
   return (
     <Layout>
       <AlbumTemplate
-        blurb={album.frontmatter.blurb}
+        blurb={page.frontmatter.blurb}
         contentComponent={HTMLContent}
         sections={page.frontmatter.sections}
         image={page.frontmatter.image}
