@@ -1,0 +1,60 @@
+.ba {
+    border-style: solid;
+    border-width: 1px;
+}
+
+.b--black-30 {
+    border-color: rgba(0, 0, 0, .3);
+}
+
+.b--dotted {
+    border-style: dotted;
+}
+
+.bt-0 {
+    border-top-width: 0;
+}
+
+.br-0 {
+    border-right-width: 0;
+}
+
+.bl-0 {
+    border-left-width: 0;
+}
+
+.lh-copy {
+    line-height: 1.5;
+}
+
+.list {
+    list-style-type: none;
+}
+
+.pa3 {
+    padding: 1rem;
+}
+
+.pl0 {
+    padding-left: 0;
+}
+
+.pv3 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.measure {
+    max-width: 30em;
+}
+
+.center {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media screen and (min-width: 30em) {
+    .pa5-ns {
+        padding: 4rem;
+    }
+}
