@@ -14,6 +14,15 @@ sections:
     rows:
       - body: This is the second section.
         image: /img/enjoy_the_great_outdoors.jpg
+      - body: >-
+          This is a row with a lot of text. This is a row with a lot of text. 
+          This is a row with a lot of text.  This is a row with a lot of text. 
+          This is a row with a lot of text.  This is a row with a lot of text. 
+          This is a row with a lot of text.  This is a row with a lot of text. 
+          This is a row with a lot of text.  This is a row with a lot of text. 
+          This is a row with a lot of text.  This is a row with a lot of text. 
+          This is a row with a lot of text.
+        image: /img/enjoy_the_great_outdoors.jpg
 date: 2019-01-23T09:17:51.838Z
 tags:
   - tag
