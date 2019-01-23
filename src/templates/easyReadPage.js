@@ -17,7 +17,7 @@ export const AlbumTemplate = ({
 
   let sectionContents = sections.map((section, index) => ({body:
     section.heading,
-    image: image,
+    image: section.image,
     index: index + 1}));
   sections.unshift( {heading: 'Contents', rows: sectionContents} );
 
