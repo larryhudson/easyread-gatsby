@@ -21,10 +21,11 @@ collections:
       - {label: "Sections", name: "sections", widget: "list", fields:
         [
           {label: "Heading", name: heading, widget: "string"},
+          {label: "Section Image", name: 'image', widget: image},
           {label: "Rows", name: rows, widget: list, fields:
             [
-              {label: Image, name: image, widget: image},
               {label: Text, name: body, widget: markdown},
+              {label: Image, name: image, widget: image},
             ]
           }
         ]}
