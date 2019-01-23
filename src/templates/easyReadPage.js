@@ -19,6 +19,7 @@ export const AlbumTemplate = ({
     section.heading,
     image: section.image,
     index: index + 1}));
+  console.log(sectionContents);
   sections.unshift( {heading: 'Contents', rows: sectionContents} );
 
   return (
@@ -223,6 +224,13 @@ export const pageQuery = graphql`
         blurb
         sections {
           heading
+          image {
+              childImageSharp {
+                fluid(maxWidth:500) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           rows {
             body
             image {
