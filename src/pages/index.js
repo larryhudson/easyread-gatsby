@@ -1,23 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import AlbumCollection from '../components/AlbumCollection'
-import AlbumCard from '../components/AlbumCard'
 import Layout from '../components/Layout'
 import { graphql } from 'gatsby'
 
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
-    const { edges: albums } = data.allMarkdownRemark
 
     return (
       <Layout>
         <div>
-          <AlbumCollection>
-          {albums.map(({ node: album }) => (
-            <AlbumCard album={album} />
-          ))}
-          </AlbumCollection>
+          <h1>Home page!</h1>
         </div>
       </Layout>
     )
