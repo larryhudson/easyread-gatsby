@@ -118,11 +118,11 @@ const NavBar = styled.div.attrs({
 })``
 
 const NextButton = styled.a.attrs({
-  className: 'fr pa3 mw5 mb3 bg-dark-gray white link dim'
+  className: 'fr pa3 mw5 mb3 bg-dark-gray white link dim pointer'
 })``
 
 const PreviousButton = styled.a.attrs({
-  className: 'fl pa3 mw5 mb3 bg-dark-gray white link dim'
+  className: 'fl pa3 mw5 mb3 bg-dark-gray white link dim pointer'
 })``
 
 const Header = styled.div.attrs({
@@ -146,7 +146,7 @@ const PageTitle = styled.h2.attrs({
 })``
 
 const SectionLink = styled.a.attrs({
-  className: "link underline hover-bg-dark-gray hover-white pa2 pointer lh-copy"
+  className: "link underline hover-bg-dark-gray hover-white pa2git pointer lh-copy"
 })``
 
 const Section = styled.section.attrs({
