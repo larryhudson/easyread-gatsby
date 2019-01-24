@@ -118,11 +118,11 @@ const NavBar = styled.div.attrs({
 })``
 
 const NextButton = styled.a.attrs({
-  className: 'fr pa3 bg-dark-gray white link dim'
+  className: 'fr pa3 mw5 mb3 bg-dark-gray white link dim'
 })``
 
 const PreviousButton = styled.a.attrs({
-  className: 'fl pa3 bg-dark-gray white link dim'
+  className: 'fl pa3 mw5 mb3 bg-dark-gray white link dim'
 })``
 
 const Header = styled.div.attrs({
@@ -142,11 +142,11 @@ const Blurb = styled.div.attrs({
 })``
 
 const PageTitle = styled.h2.attrs({
-  className: "f2 mb2"
+  className: "f3 mb2"
 })``
 
 const SectionLink = styled.a.attrs({
-  className: "link underline hover-bg-dark-gray hover-white pa3"
+  className: "link underline hover-bg-dark-gray hover-white pa2 pointer lh-copy"
 })``
 
 const Section = styled.section.attrs({
@@ -158,7 +158,7 @@ const Heading = styled.h3.attrs({
 })``
 
 const Row = styled.div.attrs({
-  className: "dt-ns w-100"
+  className: "dt-ns w-100 mb4"
 })``
 
 const ImageWrapper = styled.div.attrs({
