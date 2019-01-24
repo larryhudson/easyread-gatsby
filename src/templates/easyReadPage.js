@@ -122,7 +122,7 @@ const NextButton = styled.a.attrs({
 })``
 
 const PreviousButton = styled.a.attrs({
-  className: 'fl pa3 mw5 mb3 bg-dark-gray white link dim pointer'
+  className: 'fl pa3 mw5 mb3 bg-dark-gray white link dim pointergit '
 })``
 
 const Header = styled.div.attrs({
@@ -146,7 +146,7 @@ const PageTitle = styled.h2.attrs({
 })``
 
 const SectionLink = styled.a.attrs({
-  className: "link underline hover-bg-dark-gray hover-white pa2git pointer lh-copy"
+  className: "link underline hover-bg-dark-gray hover-white pa2 pointer lh-copy"
 })``
 
 const Section = styled.section.attrs({
