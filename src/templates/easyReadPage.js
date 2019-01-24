@@ -4,8 +4,9 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
-import Content, { HTMLContent } from '../components/Content'
 import styled from 'styled-components'
+import {space, fontSize, width, color} from 'styled-system'
+import Button from '../components/Button'
 
 export const AlbumTemplate = ({
   title,
@@ -85,9 +86,12 @@ class SectionViewer extends React.Component {
               <Text>
                 {section.heading === 'Contents' ? (
                 <Paragraph>
-                  <SectionLink onClick={() => this.showSection(row.index)}>
+                  <Link 
+                  color='white' bg='darkgray'
+                  p={2} className="underline"
+                  onClick={() => this.showSection(row.index)}>
                   {row.body}
-                  </SectionLink>
+                  </Link>
                 </Paragraph>
                 ) : (
                 <Paragraph>{row.body}</Paragraph>
@@ -98,14 +102,14 @@ class SectionViewer extends React.Component {
           </Section>
           <NavBar>
         {current > first && 
-          <PreviousButton onClick={() => this.showSection(prev)}>
+          <Button onClick={() => this.showSection(prev)}>
           <span>&larr; {sections[prev].heading}</span>
-          </PreviousButton>
+          </Button>
         }
         {current < last &&
-          <NextButton onClick={() => this.showSection(next)}>
+          <Button onClick={() => this.showSection(next)}>
           <span> &rarr; {sections[next].heading}</span>
-          </NextButton>
+          </Button>
         }
         </NavBar>
       </div>
@@ -121,8 +125,12 @@ const NextButton = styled.a.attrs({
   className: 'fr pa3 mw5 mb3 bg-dark-gray white link dim pointer'
 })``
 
+const Box = styled.div(space, fontSize, width, color)
+
+const Link = styled.a(space, fontSize, color)
+
 const PreviousButton = styled.a.attrs({
-  className: 'fl pa3 mw5 mb3 bg-dark-gray white link dim pointergit '
+  className: 'fl pa3 mw5 mb3 bg-dark-gray white link dim pointer'
 })``
 
 const Header = styled.div.attrs({
@@ -187,7 +195,6 @@ const EasyReadPage = ({ data }) => {
     <Layout>
       <AlbumTemplate
         blurb={page.frontmatter.blurb}
-        contentComponent={HTMLContent}
         sections={page.frontmatter.sections}
         image={page.frontmatter.image}
         helmet={

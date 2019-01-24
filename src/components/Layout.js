@@ -4,6 +4,8 @@ import { StaticQuery, graphql } from "gatsby"
 import Link from 'gatsby-link'
 import "../styles/tachyons.scss"
 import styled from 'styled-components'
+import { ThemeProvider } from 'styled-components'
+import theme from './theme'
 
 const TemplateWrapper = ({ children }) => (
   <StaticQuery
@@ -18,6 +20,7 @@ const TemplateWrapper = ({ children }) => (
         }
     `}
     render={data => (
+      <ThemeProvider theme={theme}>
       <Container>
         <Helmet>
           <html lang="en" />
@@ -37,6 +40,7 @@ const TemplateWrapper = ({ children }) => (
         </header>
         <div>{children}</div>
       </Container>
+      </ThemeProvider>
     )}
   />
 )
