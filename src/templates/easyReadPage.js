@@ -158,19 +158,19 @@ const Heading = styled.h3.attrs({
 })``
 
 const Row = styled.div.attrs({
-  className: "dt w-100"
+  className: "dt-ns w-100"
 })``
 
 const ImageWrapper = styled.div.attrs({
-  className: "dtc pa1 mr3 v-mid w-100 w-25-ns"
+  className: "dtc-ns pa1 mr3 v-mid w-80 mw5 center w-25-ns"
 })``
 
 const Text = styled.div.attrs({
-  className: "dtc f4 pa3 pl5 ml3 v-mid w-100 w-75-ns"
+  className: "dtc-ns f4 pa2 pl5-ns ml3-ns v-mid-ns center w-75-ns"
 })``
 
 const Paragraph = styled.p.attrs({
-  className: "lh-copy measure",
+  className: "lh-copy measure-ns",
 })``
 
 AlbumTemplate.propTypes = {

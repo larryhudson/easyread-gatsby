@@ -11,7 +11,7 @@ export default class IndexPage extends React.Component {
     return (
       <Layout>
         <div>
-          <h1>Home page!</h1>
+          <h1>Home page!</h1> 
           {pages.map(({ node: page }) => (
             <p><Link to={page.fields.slug}>{page.frontmatter.title}</Link></p>
             ))}
