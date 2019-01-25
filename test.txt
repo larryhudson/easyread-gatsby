@@ -1,0 +1,14 @@
+section.rows.forEach(row => {
+            const markdown = row.body;
+            const converted = remark().use(remarkHTML).processSync(markdown).toString();
+
+            const htmlNode = {
+              id: createNodeId(`${node.id} ${row.body} >> HTML`),
+              children: [],
+              parent: row,
+              internal: {
+                content: converted,
+                type: `HTML`,
+                },
+            }
+createNode(htmlNode)
