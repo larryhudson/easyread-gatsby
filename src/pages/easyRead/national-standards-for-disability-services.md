@@ -75,6 +75,10 @@ sections:
         image: /img/Choice-01.jpg
       - body: All disability services need to follow these 6 Standards.
         image: /img/Follow_standards.jpg
+  - heading: This is a new section.
+    rows:
+      - body: This is a new row.
+        image: /img/001_we.jpg
 date: 2019-01-23T22:32:21.050Z
 tags:
   - easy read
